@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $_SESSION['username'] = $username;
             setcookie('username', $username, time() + 3600, '/'); // Cookie на 1 час
-            header('Location: index.php');
+            header('Location: moderate.php');
             exit;
         }
     }

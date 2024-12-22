@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $users[$username] = password_hash($password, PASSWORD_DEFAULT);
             file_put_contents($usersFile, json_encode($users));
             $_SESSION['username'] = $username;
-            header('Location: index.php');
+            header('Location: moderate.php');
             exit;
         }
     }

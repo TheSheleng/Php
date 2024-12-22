@@ -52,7 +52,7 @@ if (isset($_POST['loginbtn'])) {
 
     if (login($login, $password)) {
         // Успішний вхід
-        echo "<script>window.location = 'index.php?page=home';</script>"; // Перехід на домашню сторінку
+        echo "<script>window.location = 'moderate.php?page=home';</script>"; // Перехід на домашню сторінку
     } else {
         // Якщо не вдалося увійти
         echo "<h3/><span style='color:red;'>Invalid login or password!</span><h3/>";
