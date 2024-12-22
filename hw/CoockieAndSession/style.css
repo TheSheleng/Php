@@ -1,0 +1,188 @@
+/* Общий стиль страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(170deg, #3A2F58, #350D43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Контейнер формы */
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    text-align: center;
+}
+
+/* Вкладки (SIGN IN, SIGN UP) */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tabs a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.tabs a.active {
+    color: #ffc300;
+    border-bottom: 2px solid #ffc300;
+}
+
+.tabs a:hover {
+    color: #ffc300;
+}
+
+/* Поля ввода */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Чекбокс */
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Кнопка */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ffc300;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff9f00;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Общий стиль для ссылок */
+a {
+    color: #ffc300;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+    color: #ff9f00;
+    text-decoration: underline;
+}
+
+a.active {
+    color: #fff;
+    border-bottom: 2px solid #ffc300;
+}
+
+/* Контейнер для чекбокса и текста */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между чекбоксом и текстом */
+    font-size: 16px;
+    color: #fff; /* Белый текст */
+    cursor: pointer; /* Указатель мыши */
+}
+
+/* Стилизация самого чекбокса */
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffc300;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #ffc300;
+    border-color: #ffc300;
+    position: relative;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: #531a88;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-container label {
+    cursor: pointer;
+}
